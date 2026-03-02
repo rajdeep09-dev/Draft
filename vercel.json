@@ -1,21 +1,9 @@
 {
-  "projectSettings": {
-    "framework": "nextjs"
-  },
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
-    {
-      "source": "/public/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
     {
       "source": "/fonts/(.*)",
       "headers": [
@@ -30,6 +18,15 @@
       ]
     },
     {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
       "source": "/scripts/(.*)",
       "headers": [
         {
@@ -37,29 +34,6 @@
           "value": "public, max-age=3600"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/",
-      "permanent": false
-    }
-  ],
-  "rewrites": [],
-  "functions": {
-    "api/**": {
-      "maxDuration": 10
-    }
-  },
-  "env": [
-    {
-      "key": "NEXT_PUBLIC_GTM_ID",
-      "value": "@GTM ID"
-    },
-    {
-      "key": "NEXT_PUBLIC_GA_ID", 
-      "value": "@GA ID"
     }
   ]
 }
