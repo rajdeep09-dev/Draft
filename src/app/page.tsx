@@ -184,24 +184,3 @@ export default function Home() {
     </>
   )
 }
-    }
-
-    loadScripts()
-  }, [])
-
-  // Note: The actual HTML content should be loaded here
-  // For now, we render a placeholder that will be replaced by the actual page content
-  // To complete the migration, replace this with the actual index.html content
-  
-  return (
-    <div>
-      {/* Main page content will render here */}
-      {/* This is a placeholder - inject full HTML from index.html here */}
-      <div className="page-wrapper">
-        <div className="content-placeholder">
-          <p>Draft - AI-Powered Content Workflow Platform</p>
-        </div>
-      </div>
-    </div>
-  )
-}
